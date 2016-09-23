@@ -1,0 +1,7 @@
+- var emotNum = 1
+
+mixin button(t)
+  .button-box
+    button(data-number="#{emotNum}")
+      block
+  - emotNum++

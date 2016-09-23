@@ -1,0 +1,33 @@
+.button-grid { @include flex-container();
+  > * { text-align:center; }
+  .button-box { @include flex-container(column); justify-content:center; align-items:center; }
+  button { font-size:1em; cursor: pointer; height: 2.25em; padding-left: 0.5em; padding-right: 0.5em; color:rgba(#111,0.85);
+    &[data-number="16"] { font-size:0.55em; }
+    img { height: 1.3rem; }
+    width:100%; 
+  }
+  
+  
+  button { background:#9f9f9f; border:rgba(#333,0.25) 1px solid; outline:none; color:rgba(#000,0.7);
+    &:hover { background:#bfbfbf; }
+    &:active { background:#efefef; }
+  }
+}
+
+@media screen and (min-width:769px) {
+  .button-grid {
+    > * { font-size:1.785vw; @include flex-item(14.28571428%);  }
+    button { height: 20vh;
+      img { height: 1.8vw; }
+    }
+  }
+}
+
+@media screen and (max-width:768px) {
+  .button-grid {
+    > * { font-size:4vw; @include flex-item(33.333%);   }
+    button { height: 14vh;
+      img { height: 4vw; }
+    }
+  }
+}

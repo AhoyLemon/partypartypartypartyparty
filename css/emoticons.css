@@ -1,0 +1,369 @@
+* {
+  box-sizing: border-box;
+}
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+dialog,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+font,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+hr,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+main,
+mark,
+menu,
+meter,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+progress,
+q,
+rp,
+rt,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video,
+xmp {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  display: block;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+img {
+  color: transparent;
+  font-size: 0;
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+li {
+  display: list-item;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th,
+td,
+caption {
+  font-weight: normal;
+  vertical-align: top;
+  text-align: left;
+}
+
+q {
+  quotes: none;
+}
+
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+sub,
+sup,
+small {
+  font-size: 75%;
+}
+
+sub,
+sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+svg {
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1.45vw;
+}
+
+body {
+  background-color: #313131;
+  color: #eee;
+  font-size: 1.45vw;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  cursor: pointer;
+  color: #ee2a2a;
+}
+
+b, strong {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.75em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+h5 {
+  font-size: 1.25em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 105%;
+}
+
+ul {
+  padding-left: 1.5em;
+}
+
+ul li {
+  list-style-type: disc;
+}
+
+body, button {
+  font-family: "Raleway", sans-serif;
+}
+
+@media (min-width: 768px) {
+  .mobile-only {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .desktop-only {
+    display: none;
+  }
+}
+
+.button-grid {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: strech;
+  -ms-flex-align: strech;
+  align-items: strech;
+}
+
+.button-grid > * {
+  text-align: center;
+}
+
+.button-grid .button-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: strech;
+  -ms-flex-align: strech;
+  align-items: strech;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-grid button {
+  font-size: 1em;
+  cursor: pointer;
+  height: 2.25em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  color: rgba(17, 17, 17, 0.85);
+  width: 100%;
+}
+
+.button-grid button[data-number="16"] {
+  font-size: 0.55em;
+}
+
+.button-grid button img {
+  height: 1.3rem;
+}
+
+.button-grid button {
+  background: #9f9f9f;
+  border: rgba(51, 51, 51, 0.25) 1px solid;
+  outline: none;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.button-grid button:hover {
+  background: #bfbfbf;
+}
+
+.button-grid button:active {
+  background: #efefef;
+}
+
+@media screen and (min-width: 769px) {
+  .button-grid > * {
+    font-size: 1.785vw;
+    flex-basis: 14.28571%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    align-self: auto;
+  }
+  .button-grid button {
+    height: 20vh;
+  }
+  .button-grid button img {
+    height: 1.8vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .button-grid > * {
+    font-size: 4vw;
+    flex-basis: 33.333%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    align-self: auto;
+  }
+  .button-grid button {
+    height: 14vh;
+  }
+  .button-grid button img {
+    height: 4vw;
+  }
+}
