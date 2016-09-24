@@ -1,5 +1,5 @@
 // COLORS
-$white: #eee;
+$white: #d1d1d1;
 $offwhite: #f0f1f2;
 $black: #313131;
 $blue: #4885ed;
@@ -9,7 +9,7 @@ $yellow:#e5e972;
 $teal: #4e7f71;
 $lessdark:#2A313A;
   // COLOR UTILITIES
-  $body: $black;
+  $body: $white;
   $copy: $white;
   $link: $red;
   $accent: $green;
@@ -27,18 +27,15 @@ $lessdark:#2A313A;
   $color-facebook: #3B5998;
 
 // FONTS
-$quicksand: 'Quicksand', sans-serif;
-$anonymous: 'Anonymous Pro', 'sans-serif' ;
 $font-size: 1.45vw;
 $light:300;
 $medium:400;
 $bold:600;
 
 // FONT UTILITIES
-$sans-serif: $quicksand;
-$font:'Raleway', sans-serif;
+$font:'Voltaire', sans-serif;
 
-// MEASUREMENTS //////////////////////////////////////////////////////////////////////
+// MEASUREMENTS ///////////////////////////////////////////// /////////////////////////
 $mobile-top:56px;
 $radius:6px;
 $mobile-max: 767px;

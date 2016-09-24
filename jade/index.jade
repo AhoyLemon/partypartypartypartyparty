@@ -15,9 +15,16 @@ html(lang="en")
     //include partials/sidebar.jade
     
     main
-      .button-grid
-        +button
-          | PARTY
+      +button
+        | PARTY
+        
+    ul.eq
+      li.max-party MAXIMUM PARTY!!!
+      - for (var x = 1; x < 10; x++)
+        li(data-eq="#{x}")
+      
+        
+    .count#Count 99
       
     //audio#Smileys(controls)
       source(src="/audio/emoticons.ogg" type="audio/ogg")
