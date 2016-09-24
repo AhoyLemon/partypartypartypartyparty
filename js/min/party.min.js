@@ -117,8 +117,8 @@ var sound = new Howl({
   },
   onend: function() {
     q--;
-    addParty();
     if (q > 0) {
+      addParty();
       party();
       eq();
     }
