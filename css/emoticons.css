@@ -386,6 +386,7 @@ footer {
   margin-bottom: 0.25em;
   border-radius: 4px;
   list-style: none;
+  display: none;
 }
 
 .eq li.max-party {
