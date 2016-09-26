@@ -11,6 +11,7 @@ html(lang="en")
     include partials/head.jade
   body
     include partials/mixins.jade
+    include partials/sidebar.jade
     
     main
       +button
@@ -22,12 +23,6 @@ html(lang="en")
         li(data-eq="#{x}")
       
         
-    .count#Count 99
-      
-    //audio#Smileys(controls)
-      source(src="/audio/emoticons.ogg" type="audio/ogg")
-      
+    .count#Count 0
     
-    //include partials/game-over.jade
-    //include partials/schema.jade
     include partials/javascripts.jade

@@ -1,63 +1,54 @@
 /*
 .button-grid { @include flex-container();
-  > * { text-align:center; }
-  .button-box { @include flex-container(column); justify-content:center; align-items:center; }
-  button { font-size:1em; cursor: pointer; height: 2.25em; padding-left: 0.5em; padding-right: 0.5em; color:rgba(#111,0.85);
-    &[data-number="16"] { font-size:0.55em; }
-    img { height: 1.3rem; }
-    width:100%; 
-  }
-  
-  
-  button { background:#9f9f9f; border:rgba(#333,0.25) 1px solid; outline:none; color:rgba(#000,0.7);
-    &:hover { background:#bfbfbf; }
-    &:active { background:#efefef; }
-  }
+> * { text-align:center; }
+.button-box { @include flex-container(column); justify-content:center; align-items:center; }
+button { font-size:1em; cursor: pointer; height: 2.25em; padding-left: 0.5em; padding-right: 0.5em; color:rgba(#111,0.85);
+&[data-number="16"] { font-size:0.55em; }
+img { height: 1.3rem; }
+width:100%; 
+}
+
+
+button { background:#9f9f9f; border:rgba(#333,0.25) 1px solid; outline:none; color:rgba(#000,0.7);
+&:hover { background:#bfbfbf; }
+&:active { background:#efefef; }
+}
 }
 
 @media screen and (min-width:769px) {
-  .button-grid {
-    > * { font-size:1.785vw; @include flex-item(14.28571428%);  }
-    button { height: 20vh;
-      img { height: 1.8vw; }
-    }
-  }
+.button-grid {
+> * { font-size:1.785vw; @include flex-item(14.28571428%);  }
+button { height: 20vh;
+img { height: 1.8vw; }
+}
+}
 }
 
 @media screen and (max-width:768px) {
-  .button-grid {
-    > * { font-size:4vw; @include flex-item(33.333%);   }
-    button { height: 14vh;
-      img { height: 4vw; }
-    }
-  }
+.button-grid {
+> * { font-size:4vw; @include flex-item(33.333%);   }
+button { height: 14vh;
+img { height: 4vw; }
+}
+}
 }
 */
 
-main { @include flex-container(center); width:100%; height: 80vh; }
-.button-box { display: block; margin-left: auto; margin-right: auto; width: 190px; height: 190px; background:white; border-radius: 50%; overflow: hidden; padding: 4px;
-  box-shadow: inset 6px 6px 6px rgba(0,0,0,0.2);
-  background-image:
-    radial-gradient(
-      circle,
-      #666666,
-      #999999
-    );
-  position: relative; z-index: $z-button;
-}
+main { @include flex-container(center); width:100%; height: 80vh;
+  
+  .button-box { display: block; margin-left: auto; margin-right: auto; width: 190px; height: 190px; background:white; border-radius: 50%; overflow: hidden; padding: 4px;
+    box-shadow: inset 6px 6px 6px rgba(0,0,0,0.2);
+    background-image: radial-gradient( circle, #666666,#999999);
+    position: relative; z-index: $z-button;
+  }
+  
+  button { width: 100%; height: 100%; opacity: 1; outline:none; border:none; position: relative; border-radius: 50%;
+    background-image: radial-gradient(circle at top left,yellow,#f06d06);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.8), inset 0px 2px 5px rgba(0, 0, 0, 0.35), 2px 2px 2px rgba(0,0,0,0.3);
+    display: inline-block;
+    color:#FFFBDC; font-size:50px; text-shadow:1px 1px 2px black, 0 0 1px black; cursor: pointer;
+    &:active { transform: scale(0.96); 
+    }
+  }
 
-button { width: 100%; height: 100%; opacity: 1; outline:none;
-  border:none;
-  position: relative;
-  border-radius: 50%;
-  background-image:
-    radial-gradient(
-      circle at top left,
-      yellow,
-      #f06d06
-    );
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.8), inset 0px 2px 5px rgba(0, 0, 0, 0.35), 2px 2px 2px rgba(0,0,0,0.3);
-  display: inline-block;
-  color:#FFFBDC; font-size:50px; text-shadow:1px 1px 2px black, 0 0 1px black; cursor: pointer;
-  &:active { transform: scale(0.96); }
 }
