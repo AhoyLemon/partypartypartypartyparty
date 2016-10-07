@@ -13,17 +13,23 @@ function party() {
 
 function eq() {
   $('.eq li').hide();
-  if (q > 1) { $('.eq li[data-eq="10"]').show(); }
-  if (q > 2) { $('.eq li[data-eq="9"]').show(); }
-  if (q > 3) { $('.eq li[data-eq="8"]').show(); }
-  if (q > 4) { $('.eq li[data-eq="7"]').show(); }
-  if (q > 5) { $('.eq li[data-eq="6"]').show(); }
-  if (q > 6) { $('.eq li[data-eq="5"]').show(); }
-  if (q > 7) { $('.eq li[data-eq="4"]').show(); }
-  if (q > 8) { $('.eq li[data-eq="3"]').show(); }
-  if (q > 9) { $('.eq li[data-eq="2"]').show(); }
+  if (q > 1)  { $('.eq li[data-eq="10"]').show(); }
+  if (q > 2)  { $('.eq li[data-eq="9"]').show(); }
+  if (q > 3)  { $('.eq li[data-eq="8"]').show(); }
+  if (q > 4)  { $('.eq li[data-eq="7"]').show(); }
+  if (q > 5)  { $('.eq li[data-eq="6"]').show(); }
+  if (q > 6)  { $('.eq li[data-eq="5"]').show(); }
+  if (q > 7)  { $('.eq li[data-eq="4"]').show(); }
+  if (q > 8)  { $('.eq li[data-eq="3"]').show(); }
+  if (q > 9)  { $('.eq li[data-eq="2"]').show(); }
   if (q > 10) { $('.eq li[data-eq="1"]').show(); }
-  if (q > 13) { $('.eq li.max-party').show(); }
+  
+  if (q > 13) { 
+    $('.eq li.max-party').show();
+    venga.volume(0.4);
+  } else {
+    venga.volume(0);
+  }
 }
 
 function addParty() {
@@ -125,6 +131,12 @@ var sound = new Howl({
   }
 });
 
+var venga = new Howl({
+  src: ['audio/venga.ogg', 'audio/venga.mp3'],
+  volume: 0,
+  autoplay: true,
+  loop:true
+});
 
 $('#Party').click(function() {
   if (q < 1) {
