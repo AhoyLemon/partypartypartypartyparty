@@ -24,7 +24,7 @@ function eq() {
   if (q > 9)  { $('.eq li[data-eq="2"]').show(); }
   if (q > 10) { $('.eq li[data-eq="1"]').show(); }
   
-  if (q > 13) { 
+  if (q > 12) { 
     $('.eq li.max-party').show();
     venga.volume(0.4);
   } else {
