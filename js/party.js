@@ -45,7 +45,6 @@ function eq() {
   } else {
     venga.volume(0);
   }
-  
 }
 
 function addParty() {
@@ -138,9 +137,9 @@ var sound = new Howl({
     '76': [45109, 1783]
   },
   onend: function() {
+    addParty();
     q--;
     if (q > 0) {
-      addParty();
       party();
       eq();
     }
@@ -158,6 +157,7 @@ $('#Party').click(function() {
   if (q < 1) {
     q = 1;
     party();
+    eq();
   } else {
     q++;
     eq();
