@@ -3,12 +3,27 @@
 var q = 0;
 var parties = 0;
 
+function sendGA(c, a, l, v) {
+  if (v) {
+    ga('send', 'event', { eventCategory: c, eventAction: a, eventLabel: l, eventValue:v });
+    console.log('CATEGORY: '+c+', ACTION:'+a+', LABEL:'+l+', VALUE:'+v);
+  } else if (l) {
+    ga('send', 'event', { eventCategory: c, eventAction: a, eventLabel: l });
+    console.log('CATEGORY: '+c+', ACTION:'+a+', LABEL:'+l);
+  } else {
+    ga('send', 'event', { eventCategory: c, eventAction: a });
+    console.log('CATEGORY: '+c+', ACTION:'+a);
+  }
+}
+
+
 function party() {
   var p = Math.floor((Math.random() * 75) + 1);
   p++;
   p = p.toString();
-  console.log(p);
+  //console.log(p);
   sound.play(p);
+  sendGA('PARTY', p,  q+' parties queued');
 }
 
 function eq() {
@@ -30,6 +45,7 @@ function eq() {
   } else {
     venga.volume(0);
   }
+  
 }
 
 function addParty() {
