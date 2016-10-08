@@ -401,7 +401,7 @@ footer {
   position: absolute;
   top: 0.8rem;
   right: 1rem;
-  z-index: 6; }
+  z-index: 12; }
 
 .hamburger {
   background: transparent;
@@ -442,7 +442,7 @@ footer {
   color: #313131;
   width: 14rem;
   padding: 1rem;
-  z-index: 3;
+  z-index: 11;
   border-left: 1px solid #d1d1d1;
   border-bottom: 1px solid #d1d1d1;
   -webkit-transform: translateX(101%);
@@ -549,6 +549,15 @@ footer {
       color: #e5e972;
       background: #313131;
       border-color: #e5e972; }
+
+@media screen and (max-width: 767px) {
+  .hamburger {
+    height: 44px;
+    width: 44px; }
+  .sidebar {
+    font-size: 18px;
+    width: 12em;
+    z-index: 11; } }
 
 @media all and (display-mode: standalone) {
   #AddToHomeScreen {

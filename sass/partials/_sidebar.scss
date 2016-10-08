@@ -56,6 +56,14 @@
   }
 }
 
+@media screen and (max-width:$mobile-max) {
+  .hamburger { height:44px; width: 44px;
+    
+  }
+  .sidebar { font-size:18px; width:12em; z-index:$z-sidebar; }
+}
+
+
 
 @media all and (display-mode: standalone) {
   #AddToHomeScreen { display: none; }
