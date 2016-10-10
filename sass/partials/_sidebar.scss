@@ -30,6 +30,10 @@
     .tap-that-icon { margin-top: -1.2em; }
     .bottom-center-icon { display:none; }
     &.firefox { padding-top:1em; }
+    &.opera { left:0; right: null;
+      .tap-that-icon { text-align: left; }
+      span.arrow { float: left; margin-right: 1em; }
+    }
   }
   &.ios { @include position(fixed,null,0,0,0);
     .homescreen-help { text-align: center; }
