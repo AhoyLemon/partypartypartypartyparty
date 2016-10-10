@@ -57,10 +57,11 @@
 }
 
 @media screen and (max-width:$mobile-max) {
-  .hamburger { height:44px; width: 44px;
-    
-  }
+  .hamburger { height:44px; width: 44px; }
   .sidebar { font-size:18px; width:12em; z-index:$z-sidebar; }
+  .homescreen-help-holder {  font-size:14px;
+    .homescreen-help { padding: 28px 12px;}
+  }
 }
 
 

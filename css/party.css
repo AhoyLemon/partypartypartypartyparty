@@ -477,7 +477,7 @@ footer {
 .homescreen-help-holder {
   background: #e5e972;
   color: #313131;
-  z-index: 7;
+  z-index: 13;
   display: none; }
   .homescreen-help-holder.android {
     position: fixed;
@@ -557,7 +557,11 @@ footer {
   .sidebar {
     font-size: 18px;
     width: 12em;
-    z-index: 11; } }
+    z-index: 11; }
+  .homescreen-help-holder {
+    font-size: 14px; }
+    .homescreen-help-holder .homescreen-help {
+      padding: 28px 12px; } }
 
 @media all and (display-mode: standalone) {
   #AddToHomeScreen {
