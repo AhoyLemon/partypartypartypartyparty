@@ -197,7 +197,7 @@ function addToHomeScreen(device,browser) {
     $('#HomescreenLink').text('add to desktop');
     $('#HomescreenLink, #HomescreenHolder').addClass('desktop-chrome');
   } else if (browser == "firefox") {
-    $('#AddToHomeScreen').html('<span class="label">bookmark idiots.win</span><span class="indent">Control+D</span>');
+    $('#AddToHomeScreen').html('<span class="label">bookmark partypartypartyparty.party</span><span class="indent">Control+D</span>');
   } else {
     $('#AddToHomeScreen').remove();
   }
