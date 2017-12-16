@@ -1,0 +1,27 @@
+- var siteTitle = "PARTY PARTY PARTY PARTY PARTY PARTY PARTY PARTY PARTY"
+- var siteURL = "http://partypartypartyparty.party"
+- var pageTitle = "PARTY PARTY PARTY PARTY PARTY PARTY PARTY PARTY PARTY"
+- var description = "What's that you say?"
+- var d = new Date()
+- var lastUpdated = d.getFullYear() + '-' + (d.getMonth()<10?'0':'') + d.getMonth() + '-' + (d.getDate()<10?'0':'') + d.getDate() + '@' + (d.getHours()<10?'0':'') + d.getHours() + ':' + (d.getMinutes()<10?'0':'') + d.getMinutes() + ':' + (d.getSeconds()<10?'0':'') + d.getSeconds()
+
+doctype html
+html(lang="en")
+  head
+    include partials/_head.pug
+  body
+    include partials/_mixins.pug
+    include partials/_sidebar.pug
+    
+    main
+      +button
+        | PARTY
+        
+    ul.eq
+      li.max-party MAXIMUM PARTY!!!
+      - for (var x = 1; x < 10; x++)
+        li(data-eq=x)
+        
+    .count#Count 0
+    
+    include partials/_javascripts.pug

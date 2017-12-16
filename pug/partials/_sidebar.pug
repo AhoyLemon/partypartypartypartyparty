@@ -1,0 +1,60 @@
+.hamburger-holder
+  button.hamburger
+    svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32")
+      g.open#HamburgerOpen
+        path(d="M28.8 6.9H3.2c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5h25.6c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5zM28.8 17.5H3.2c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5h25.6c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5zM28.8 28H3.2c-.8 0-1.5-.7-1.5-1.5S2.4 25 3.2 25h25.6c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5z")
+      g.close#HamburgerClose
+        path(d="M29.7 25.4L18.3 16l11.3-9.5c.6-.5.7-1.5.2-2.1-.5-.6-1.5-.7-2.1-.2L16 14 4.1 4.2c-.6-.5-1.5-.4-2.1.2-.5.7-.4 1.6.2 2.1L13.6 16 2.3 25.5c-.6.5-.7 1.5-.2 2.1.3.4.7.5 1.1.5.3 0 .7-.1 1-.4L16 17.9l11.8 9.8c.3.2.6.3 1 .3s.9-.2 1.2-.5c.5-.6.4-1.6-.3-2.1z")
+
+
+.sidebar
+  ul
+    li
+      span.label This party by 
+      span.indent
+        a(href="http://ahoylemon.xyz" target="_blank" onclick="sendGA('outside link', 'http://ahoylemon.xyz')") Lemon
+    li
+      span.label built using
+      span.indent
+        a(href="https://howlerjs.com/" target="_blank" onclick="sendGA('outside link', 'https://howlerjs.com/')") howler.js
+    li
+      span.label the voice of
+      span.indent
+        a(href="https://thefpl.us/meet/stog" target="_blank" onclick="sendGA('outside link', 'https://thefpl.us/meet/stog')") STOG
+    li#AddToHomeScreen
+      span.label Go ahead and
+      span.indent 
+        a(style="font-weight:bold;")#HomescreenLink
+    //-
+      li
+        span.label You can
+        span.indent
+          a#OpenSharebox share this round.
+      li.smaller Your progress will be saved if you close this browser.
+
+.homescreen-help-holder.helper-holder#HomescreenHolder
+  .homescreen-help
+    .tap-that-icon.top-right-icon Tap that 
+      span.opera heart 
+      | icon 
+      span.arrow
+        svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 83.6 100")
+          path(d="M.1 41.7L41.8 0l41.8 41.7v27.6L51.9 37.6V100H31.6V37.8L0 69.3")
+    p.ios Tap the icon below, then choose 
+      b Add To Home Screen 
+      | from the menu that appears.
+    p.android Then choose
+      b Add to Home screen
+      |  from the menu that appears.
+    p.edge Then choose 
+      b Pin this page to start
+      |  from the menu that appears.
+    p.desktop-chrome Then choose 
+      b More Tools
+      |  and then 
+      b Add To Desktop
+    a.button.close-homescreen-help#CloseHomeScreenHelp Okay, did it.
+    .tap-that-icon.ios.bottom-center-icon
+      span.arrow
+        svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 83.6 100")
+          path(d="M83.6 58.3L41.8 100 0 58.3V30.7l31.8 31.7V0H52v62.2l31.6-31.5")
