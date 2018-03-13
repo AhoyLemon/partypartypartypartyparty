@@ -2,10 +2,11 @@
 .hamburger { background:transparent; border:none; cursor: pointer; color:$black; outline:none; height: 2.25rem; width: 2.25rem;
   svg { fill:currentColor;  }
   g { transform-origin: center; transition:all 0.3s linear; }
-  .close { opacity: 0.2; transform: scale(0.2); }
+  
+  .fill, .x { opacity: 0; }
   &.is-active {
-    .close { opacity: 1; transform: scale(1);}
-    .open { opacity: 0.2; transform: scale(0.2);}
+    .question-mark { opacity: 0; }
+    .x { opacity: 1; }
   }
 }
 

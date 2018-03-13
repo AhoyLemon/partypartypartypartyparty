@@ -47,8 +47,7 @@ main { @include flex-container(center); width:100%; height: 80vh;
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.8), inset 0px 2px 5px rgba(0, 0, 0, 0.35), 2px 2px 2px rgba(0,0,0,0.3);
     display: inline-block;
     color:#FFFBDC; font-size:50px; text-shadow:1px 1px 2px black, 0 0 1px black; cursor: pointer;
-    &:active { transform: scale(0.96); 
-    }
+    &:active { transform: scale(0.96); }
   }
 
 }
