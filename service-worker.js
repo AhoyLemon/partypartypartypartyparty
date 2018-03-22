@@ -1,6 +1,7 @@
 'use strict';
 
-const cacheName = 'v1.01a';
+const cacheName = 'v1.03';
+const offlineUrl = '/index.html';
 
 self.addEventListener('install', e => {
   // once the SW is installed, go ahead and fetch the resources
@@ -19,4 +20,16 @@ self.addEventListener('install', e => {
       ]).then(() => self.skipWaiting());
     })
   );
+});
+
+self.addEventListener('fetch', function(event) {
+  if (event.request.mode === 'navigate' || (event.request.method === 'GET' && event.request.headers.get('accept').includes('text/html'))) {
+    event.respondWith(
+      fetch(event.request.url).catch(error => {
+        return caches.match(offlineUrl);
+      })
+    );
+  } else {
+    return response
+  }
 });
