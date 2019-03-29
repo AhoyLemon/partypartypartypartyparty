@@ -315,7 +315,8 @@ main {
     color: #FFFBDC;
     font-size: 50px;
     text-shadow: 1px 1px 2px black, 0 0 1px black;
-    cursor: pointer; }
+    cursor: pointer;
+    touch-action: manipulation; }
     main button:active {
       -webkit-transform: scale(0.96);
       -ms-transform: scale(0.96);
