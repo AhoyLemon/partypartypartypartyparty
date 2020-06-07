@@ -1,35 +1,52 @@
-'use strict';
-
-const cacheName = 'v1.03';
+const cacheName = 'v1.04';
 const offlineUrl = '/index.html';
+const offlineFiles = [
+  '/index.html',
+  '/manifest.json',
+  '/css/party.css',
+  '/js/min/jquery.min.js',
+  '/js/min/howler.min.js',
+  '/js/min/party.min.js',
+  '/audio/party.mp3',
+  '/audio/venga.mp3'
+];
 
-self.addEventListener('install', e => {
-  // once the SW is installed, go ahead and fetch the resources
-  // to make this work offline
-  e.waitUntil(
-    caches.open(cacheName).then(cache => {
-      return cache.addAll([
-        '/index.html',
-        '/manifest.json',
-        '/css/party.css',
-        '/js/min/jquery.min.js',
-        '/js/min/howler.min.js',
-        '/js/min/party.min.js',
-        '/audio/party.mp3',
-        '/audio/venga.mp3'
-      ]).then(() => self.skipWaiting());
+
+
+self.addEventListener('install', function(event) {
+  // Put `offline.html` page into cache
+  var offlineRequest = new Request(offlineFiles);
+  event.waitUntil(
+    fetch(offlineRequest).then(function(response) {
+      return caches.open('offline').then(function(cache) {
+        console.log('[oninstall] Cached offline page', response.url);
+        return cache.put(offlineRequest, response);
+      });
     })
   );
 });
 
 self.addEventListener('fetch', function(event) {
-  if (event.request.mode === 'navigate' || (event.request.method === 'GET' && event.request.headers.get('accept').includes('text/html'))) {
+  // Only fall back for HTML documents.
+  var request = event.request;
+  // && request.headers.get('accept').includes('text/html')
+  if (request.method === 'GET') {
+    // `fetch()` will use the cache when possible, to this examples
+    // depends on cache-busting URL parameter to avoid the cache.
     event.respondWith(
-      fetch(event.request.url).catch(error => {
-        return caches.match(offlineUrl);
+      fetch(request).catch(function(error) {
+        // `fetch()` throws an exception when the server is unreachable but not
+        // for valid HTTP responses, even `4xx` or `5xx` range.
+        console.error(
+          '[onfetch] Failed. Serving cached offline fallback ' +
+          error
+        );
+        return caches.open('offline').then(function(cache) {
+          return cache.match(offlineUrl);
+        });
       })
     );
-  } else {
-    return response
   }
+  // Any other handlers come here. Without calls to `event.respondWith()` the
+  // request will be handled without the ServiceWorker.
 });
