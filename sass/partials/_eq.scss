@@ -8,7 +8,7 @@ $green:#13398E;
   99% { transform: translateY(0); }
 }
 
-.eq { @include position(fixed,null,0.25em,0) font-size:20px; z-index: $z-eq;
+.eq { @include position(fixed,null,0.25em,0); font-size:20px; z-index: $z-eq;
   li { height:2vh; width:4em; margin-bottom: 0.25em; border-radius: 4px; list-style: none; display: none;
     &.max-party { color:$red; height: auto; text-align: center; animation: wob 1.25s linear infinite; }
     &:nth-child(2)  { background:rgba(mix($red, $green, 90%),0.8); }

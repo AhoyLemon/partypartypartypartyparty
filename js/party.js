@@ -204,45 +204,72 @@ function addToHomeScreen(device,browser) {
 }
 
 $(document).ready(function() {
-  
-  var ua = navigator.userAgent.toLowerCase();
-  console.log(ua);
-  device = "";
-  browser = "";
-  
-  if (ua.indexOf("android") > -1) {
-    device = "android";
-    if (ua.indexOf("firefox") > -1) {
-      // Android Firefox
-      browser="firefox";
-    } else if (ua.indexOf("opr") > -1) {
-      // Android Opera
-      browser="opera";
-    } else if (ua.indexOf("chrome") > -1) {
-      // Android Chrome
-      browser="chrome";
+
+  let installEvent;
+  window.addEventListener('beforeinstallprompt', (event) => {
+    event.preventDefault();
+    installEvent = event;
+  });
+
+  $('#InstallPWA').click(function() {
+    installEvent.prompt();
+  });
+
+  $('#ShareParty').click(function() {
+    const currentUrl = window.location.href;
+    if (navigator.share) {
+      navigator.share({
+        title: 'PARTY PARTY PARTY PARTY PARTY PARTY',
+        text: 'PARTY PARTY PARTY PARTY PARTY PARTY PART PARTY PARTY PARTY PARTY PARTY PARTY PARTY PARTY PARTY PARTY PARTY PARTY PART PARTY PARTY PARTY PARTY PARTY PARTY',
+        url: currentUrl,
+      }) 
+      .then(() => {
+        sendEvent('share round', currentUrl)
+      })
+      .catch((error) => {
+        // This seems to happen regardless.
+      });
     }
-  } else if (ua.indexOf('iphone') > -1 || ua.indexOf('ipad') > -1 || ua.indexOf('ipod') > -1) {
-    device = "ios";
-  } else if (ua.indexOf('windows') > -1) {
-    device = "windows";
-    if (ua.indexOf("edge") > -1) {
-      browser = "edge";
-    } else if (ua.indexOf("trident") > -1) {
-      browser = "ie";
-    } else if (ua.indexOf('firefox') > -1) {
-      browser = "firefox";
-    } else if (ua.indexOf('opr') > -1) {
-      browser = "opera";
-    } else if (ua.indexOf('chrome') > -1) {
-      browser = "chrome";
-    }
-  } else if (ua.indexOf('firefox') > -1) {
-    browser = "firefox";
-  } else if (ua.indexOf('chrome') > -1) {
-    device = "unknown";
-    browser = "chrome";
-  }
-  console.log('device: '+device+'. browser:'+browser);
-  addToHomeScreen(device,browser);
+  });
+  
+  // var ua = navigator.userAgent.toLowerCase();
+  // console.log(ua);
+  // device = "";
+  // browser = "";
+  
+  // if (ua.indexOf("android") > -1) {
+  //   device = "android";
+  //   if (ua.indexOf("firefox") > -1) {
+  //     // Android Firefox
+  //     browser="firefox";
+  //   } else if (ua.indexOf("opr") > -1) {
+  //     // Android Opera
+  //     browser="opera";
+  //   } else if (ua.indexOf("chrome") > -1) {
+  //     // Android Chrome
+  //     browser="chrome";
+  //   }
+  // } else if (ua.indexOf('iphone') > -1 || ua.indexOf('ipad') > -1 || ua.indexOf('ipod') > -1) {
+  //   device = "ios";
+  // } else if (ua.indexOf('windows') > -1) {
+  //   device = "windows";
+  //   if (ua.indexOf("edge") > -1) {
+  //     browser = "edge";
+  //   } else if (ua.indexOf("trident") > -1) {
+  //     browser = "ie";
+  //   } else if (ua.indexOf('firefox') > -1) {
+  //     browser = "firefox";
+  //   } else if (ua.indexOf('opr') > -1) {
+  //     browser = "opera";
+  //   } else if (ua.indexOf('chrome') > -1) {
+  //     browser = "chrome";
+  //   }
+  // } else if (ua.indexOf('firefox') > -1) {
+  //   browser = "firefox";
+  // } else if (ua.indexOf('chrome') > -1) {
+  //   device = "unknown";
+  //   browser = "chrome";
+  // }
+  // console.log('device: '+device+'. browser:'+browser);
+  // addToHomeScreen(device,browser);
 });

@@ -1,58 +1,90 @@
 {
-  "manifest_version": 2,
-  "name": "PARTY PARTY PARTY PARTY PARTY PARTY PART PARTY PARTY PARTY PARTY PARTY PARTY",
+  "manifest_version": "3.0",
+  "name": "PARTY PARTY PARTY PARTY PARTY PARTY PARTY PARTY PARTY PARTY PARTY PARTY PARTY",
   "short_name": "PARTY",
   "description": "PARTY PARTY PARTY PARTY PARTY PARTY PART PARTY PARTY PARTY PARTY PARTY PARTY",
+  "id": "PARTYPARTYPARTYPARTYPARTY",
+  "dir": "ltr",
+  "lang": "en",
   "default_locale": "en",
-  "display": "standalone",
+  "orientation": "any",
+  "display": "fullscreen",
   "scope": "/",
   "start_url": "/",
   "theme_color": "#d1d1d1",
   "background_color": "#d1d1d1",
   "icons": [
     {
-      "src": "/android-chrome-36x36.png",
-      "sizes": "36x36",
-      "type": "image/png"
+      "src": "/favicon_maskable-1200x1200.png?v=2024",
+      "sizes": "600x600",
+      "type": "image/png",
+      "purpose": "maskable"
     },
     {
-      "src": "/android-chrome-48x48.png",
-      "sizes": "48x48",
-      "type": "image/png"
+      "src": "/favicon_maskable-600x600.png?v=2024",
+      "sizes": "600x600",
+      "type": "image/png",
+      "purpose": "maskable"
     },
     {
-      "src": "/android-chrome-72x72.png",
-      "sizes": "72x72",
-      "type": "image/png"
-    },
-    {
-      "src": "/android-chrome-96x96.png",
-      "sizes": "96x96",
-      "type": "image/png"
-    },
-    {
-      "src": "/android-chrome-144x144.png",
-      "sizes": "144x144",
-      "type": "image/png"
-    },
-    {
-      "src": "/android-chrome-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/android-chrome-256x256.png",
+      "src": "/favicon_maskable-256x256.png?v=2024",
       "sizes": "256x256",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "maskable"
     },
     {
-      "src": "/android-chrome-384x384.png",
-      "sizes": "384x384",
-      "type": "image/png"
+      "src": "/favicon_monochrome-600x600.png?v=2024",
+      "sizes": "600x600",
+      "type": "image/png",
+      "purpose": "monochrome"
     },
     {
-      "src": "/android-chrome-512x512.png",
+      "src": "/favicon_monochrome-256x256.png?v=2024",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "monochrome"
+    },
+    {
+      "src": "/android-chrome-512x512.png?v=2024",
       "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/android-chrome-192x192.png?v=2024",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon.png?v=2024",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["entertainment", "productivity", "utilities"],
+  "screenshots": [
+    {
+      "src": "/img/screenshots/ss1.png",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/screenshots/ss2.png",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/screenshots/ss3.png",
       "type": "image/png"
     }
   ]
