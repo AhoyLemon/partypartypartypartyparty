@@ -4,6 +4,12 @@
     <loc>https://partypartypartyparty.party</loc>
     <changefreq>monthly</changefreq>
     <priority>1</priority>
-    <lastmod>2022-01-23T19:12:30.247Z</lastmod>
+    <lastmod>2024-02-07T04:30:41.948Z</lastmod>
+  </url>
+  <url>
+    <loc>https://partypartypartyparty.party/privacy-policy.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
+    <lastmod>2024-02-07T04:30:41.948Z</lastmod>
   </url>
 </urlset>
