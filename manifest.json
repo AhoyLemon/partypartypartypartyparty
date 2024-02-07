@@ -1,7 +1,6 @@
 {
-  "manifest_version": "3.0",
-  "name": "PARTY PARTY PARTY PARTY PARTY PARTY PARTY PARTY PARTY PARTY PARTY PARTY PARTY",
-  "short_name": "PARTY",
+  "manifest_version": "3.0.2",
+  "name": "PARTY PARTY PARTY PARTY PARTY",
   "description": "PARTY PARTY PARTY PARTY PARTY PARTY PART PARTY PARTY PARTY PARTY PARTY PARTY",
   "id": "PARTYPARTYPARTYPARTYPARTY",
   "dir": "ltr",
