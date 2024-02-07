@@ -1,17 +1,15 @@
-const cacheName = 'v1.2';
+const cacheName = 'v1.2.1';
 const offlineUrl = '/index.html';
 const offlineFiles = [
-  '/index.html',
-  '/manifest.json',
-  '/css/party.css',
-  '/js/min/jquery.min.js',
-  '/js/min/howler.min.js',
-  '/js/min/party.min.js',
-  '/audio/party.mp3',
-  '/audio/venga.mp3'
+  '/index.html?v='+cacheName,
+  '/manifest.json?v='+cacheName,
+  '/css/party.css?v='+cacheName,
+  '/js/min/jquery.min.js?v='+cacheName,
+  '/js/min/howler.min.js?v='+cacheName,
+  '/js/min/party.min.js?v='+cacheName,
+  '/audio/party.mp3?v='+cacheName,
+  '/audio/venga.mp3?v='+cacheName
 ];
-
-
 
 self.addEventListener('install', function(event) {
   // Put `offline.html` page into cache
