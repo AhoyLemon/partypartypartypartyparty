@@ -514,6 +514,7 @@ footer {
   border-bottom: 1px solid #d1d1d1;
   font-size: clamp(18px, 3.25vw, 24px);
   padding-right: calc(clamp(68px, 5vw, 100px) + 32px);
+  padding: 30px clamp(68px, 5vw, 100px) 30px 30px;
   -webkit-transform: translateX(101%);
       -ms-transform: translateX(101%);
           transform: translateX(101%);
@@ -676,13 +677,8 @@ footer {
 }
 
 @media screen and (max-width: 767px) {
-  .hamburger {
-    height: 44px;
-    width: 44px;
-  }
   .sidebar {
     font-size: 18px;
-    width: 12em;
     z-index: 11;
   }
   .homescreen-help-holder {
@@ -697,3 +693,4 @@ footer {
     display: none;
   }
 }
+/*# sourceMappingURL=party.css.map */

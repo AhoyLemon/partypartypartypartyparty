@@ -17,9 +17,7 @@ $hamburger-size:clamp(68px,5vw,100px);
 
 
 .sidebar { @include position(fixed,0,0); background: $offwhite; color:$black; padding: 1rem; z-index: $z-sidebar; border-left:1px solid $body; border-bottom:1px solid $body; font-size:clamp(18px,3.25vw,24px); padding-right: calc($hamburger-size + 32px);
-
-  
-
+  padding:30px $hamburger-size 30px 30px;
   ul { padding: 0; }
   li { margin-bottom: 0.65em; list-style: none; }
   .label { display: block; line-height: 90% }
@@ -73,8 +71,8 @@ $hamburger-size:clamp(68px,5vw,100px);
 }
 
 @media screen and (max-width:$mobile-max) {
-  .hamburger { height:44px; width: 44px; }
-  .sidebar { font-size:18px; width:12em; z-index:$z-sidebar; }
+  // .hamburger { height:44px; width: 44px; }
+  .sidebar { font-size:18px; z-index:$z-sidebar; }
   .homescreen-help-holder {  font-size:14px;
     .homescreen-help { padding: 28px 12px;}
   }
